@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/purple_700"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/explanation_text_field_gross"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50sp"
+            android:layout_marginTop="120sp"
+            android:text="@string/gross_income_ant_popieriaus"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <EditText
+            android:id="@+id/edit_text_field_gross"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50sp"
+            android:autofillHints="enter gross"
+            android:hint="@string/enter_gross"
+            android:inputType="numberDecimal"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="@id/explanation_text_field_gross"
+            app:layout_constraintTop_toBottomOf="@id/explanation_text_field_gross" />
+
+        <Button
+            android:id="@+id/calculate_button_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="@string/calculate_net"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_field_gross">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/explanation_text_field_net"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50sp"
+            android:layout_marginTop="60sp"
+            android:text="@string/net_income_i_rankas"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/edit_text_field_gross"
+            app:layout_constraintTop_toBottomOf="@id/calculate_button_net" />
+
+        <EditText
+            android:id="@+id/edit_text_field_net"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50sp"
+            android:autofillHints="enter net"
+            android:hint="@string/enter_net"
+            android:inputType="numberDecimal"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="@id/explanation_text_field_net"
+            app:layout_constraintTop_toBottomOf="@id/explanation_text_field_net" />
+
+        <Button
+            android:id="@+id/calculate_button_gross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="@string/calculate_gross"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_field_net">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
