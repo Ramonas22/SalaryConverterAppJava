@@ -7,4 +7,5 @@
     <string name="enter_net">enter net</string>
     <string name="calculate_net">Calculate Net</string>
     <string name="calculate_gross">Calculate Gross</string>
+    <string name="without_npd">Without NPD</string>
 </resources>
